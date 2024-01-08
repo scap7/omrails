@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'about-us' => "my_pages#about_us"
+  get 'contact-us'=>"my_pages#contact_us"
+  get 'privacy-policy'=> "my_pages#privacy_policy"
   root "pages#home"
 
 
