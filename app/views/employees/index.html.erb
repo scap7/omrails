@@ -1,0 +1,41 @@
+<div class="col-lg-12">
+    <div class="card rounded-0 mb-5">
+        <div class="card-body">
+            <h2 class="text-center">Listing Employees</h2>
+
+        </div>
+    </div>
+    <%=flash[:notice] %>
+    <%=link_to "Create New Employee",new_employee_path,class:"btn btn-primary mb-4 rounded-0" %>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Sr No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%@employees.each do |employee|%>
+            <tr>
+                <th><%=employee.id%></th>
+                <th>
+                    <%=employee.name%>
+                </th>
+                <th>
+                    <%=employee.personal_email%>
+                </th>
+                <th>
+                    <%=employee.address%>
+                </th>
+                <th>
+                    <%=employee.salary%>
+                </th>
+            </tr>
+                
+            <%end%>
+        </tbody>
+    </table>
+</div>

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'privacy-policy'=> "my_pages#privacy_policy"
   root "pages#home"
 
-
+  resources :employees
+  
 
   get "up" => "rails/health#show", as: :rails_health_check
 
