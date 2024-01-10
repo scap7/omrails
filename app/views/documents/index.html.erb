@@ -1,0 +1,7 @@
+<h1><%@documents.each do |document|%></h1>
+    Employee name: <h3><%=link_to document.employee.name, employee_path(document.employee)%></h3>
+    documents: 
+    <h4><%=document.name%></h4>
+    <h4><%=document.doc_type%></h4>
+
+<%end%>
